@@ -10,11 +10,11 @@
  * Return: Nothing
 */
 
+
 void swap_int(int *a, int *b)
 {
-	int temp;
+    int c = *a;
 
-	temp = *a;
-	*a = *b;
-	*b = temp
+    *a = *b;
+    *b = c;
 }
