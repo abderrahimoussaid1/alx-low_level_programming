@@ -1,22 +1,19 @@
 #include <stdio.h>
 
-/* function to print a string reverse one character at a time */
+/**
+ * print_rev - prints a string in reverse
+ * @s: string to be printed
+ */
 void print_rev(char *s)
 {
-  int i;
+	char *last = s;
 
-  i = 0;
-  while (s[i] != '\0')
-  {
-    i++;
-  }
-    i = i - 1;
-
-  while (i >= 0)
-  {
-    putchar(s[i]);
-    i--;
-  }
-
-  putchar('\n');
+	while (*last != '\0')
+		last++;
+	while (last > s)
+	{
+		last--;
+		printf("%c", *last);
+	}
+	putchar('\n');
 }
