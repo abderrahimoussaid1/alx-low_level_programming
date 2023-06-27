@@ -1,4 +1,3 @@
-#include "stdio.h"
 #include <unistd.h>
 
 /**
@@ -9,14 +8,12 @@
 
 void print_rev(char *s)
 {
-	int i = 0;
+	int i;
 
-	while (s[i])
-		i++;
-
-	while (i--)
-	{
-		_putchar(s[i]);
-	}
-	_putchar('\n');
+	for (i = 0; s[i] != '\0'; i++)
+		;
+	for (i--; i >= 0; i--)
+		write(1, &s[i], 1);
+	write(1, "\n", 1);
+}
 }
